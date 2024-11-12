@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    margin: 100px 5%;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.search_cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.search_box {
+    width: 40vw;
+    padding: 20px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border: 1px solid orange;
+}
+
+.search_box::placeholder {
+    color: orange;
+}
+
+.search_btn {
+    padding: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: orange;
+    border: 1px solid orange;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bookmark::before {
+    font-size: 30px;
+}
+
+.bookmark_cnt {
+    border: 3px solid orange;
+    background-color: orange;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    transition: 0.5s all ease;
+}
+
+.bookmark_cnt:hover {
+    box-shadow: 0 4px 15px white;
+    transform: scale(1.05);
+}
+
+.bookmark {
+    cursor: pointer;
+}
+
+.fa-bookmark {
+    color: #FFD700;
+}
+
+#food_grid {
+    margin: 2.4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.food_item {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+    transition: 0.5s all ease;
+}
+
+.food_item:hover {
+    box-shadow: 0 4px 15px white;
+    transform: scale(1.05);
+}
+
+.food_img img{
+    object-fit: cover;
+    max-height: 405h;
+    width: 100%;
+    display: block;
+}
+
+.food_name {
+    padding: 1.5rem 0.5rem;
+}
+
+.food_name h3 {
+    font-size: 1.4rem;
+    height: 100px;
+}
+
+.recipe_desc {
+    margin: 1rem auto;
+}
+
+.recipe_btn {
+    background-color: orange;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 150px;
+    cursor: pointer;
+}
+
+.buttons_cnt {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_content {
+    background-color: white;
+    margin: 4% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.modal_content h2 {
+    margin-bottom: 2%;
+}
+
+.modal_content img {
+    border-radius: 20px;
+    width: 50%;
+    height: auto;
+    margin-bottom: 2%;
+}
+
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+header {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.favorite_h2 {
+    font-size: 40px;
+}
+
+.favorite_btn {
+    margin-top: 3%;
+    background-color: orange;
+    border: none;
+    padding: 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.favorite_btn:hover {
+    border: 3px solid orange;
+    color: black;
+    background-color: #fff;
+}
+
+.autocomplete-results {
+    position: absolute;
+    top: 31%;
+    right: 33.7%;
+    background-color: white;
+    width: 40%;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.autocomplete-results:empty {
+    display: none;
+}
+ 
+.autocomplete-results div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-results div:hover {
+    background-color: #f0f0f0;
+}
+
+@media(max-width: 744px) {
+    .autocomplete-results {
+        top: 35.5%;
+        right: 37.5%;
+    }
+}
+
+@media(max-width: 378px) {
+    .autocomplete-results {
+        top: 40.5%;
+        right: 45%;
+    }
+}
+
+@media(max-width: 285px) {
+    .autocomplete-results {
+        top: 37.5vh;
+        right: 44%;
+    }
+}

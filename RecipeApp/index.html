@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+
+    <link rel="stylesheet" href="/RecipeApp/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    
+    <main>
+        <div class="main_wrapper">
+            <div class="main_search">
+                <h1 class="title">Find different recipes for your favorite dish</h1>
+                <div class="search_cnt">
+                    <input type="text" class="search_box" placeholder="Enter an ingredient name" id="search_input">
+                    <button type="submit" class="search_btn btn" id="search_btn">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    <div class="bookmark_cnt">
+                        <i class="fa fa-bookmark-o bookmark"  style="color: white;" id="bookmark"></i>
+                    </div>
+                    <div id="autocomplete_results" class="autocomplete-results"></div>
+                </div>
+            </div>  
+            
+            <div class="main_result">
+                <h2>Search Results:</h2>
+                <div id="food_grid">
+                    
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/RecipeApp/script.js"></script>
+</body>
+</html>

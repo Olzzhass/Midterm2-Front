@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <h1>Weather App</h1>
+        <div class="app_cnt">
+            <div class="top">
+                <div class="search_cnt flexB">
+                    <h3>Enter a City Name</h3>
+                    <input type="text" id="city" placeholder="E.g., New York, Tokyo">
+                    <button type="button" class="search_btn">Search</button>
+                    <button style="background-color: #6c757e;" type="button" class="curr_loc_btn">Current Location</button>
+                    <div class="checkbox_cnt">
+                        <div class="celcius_cnt">
+                            <input type="checkbox" id="celcius" checked onclick="toggleCheckbox(this)"/>
+                            <label for="celcius">Celcius</label>
+                        </div>
+
+                        <div class="farahngeit_cnt">
+                            <input type="checkbox" id="farahngeit" onclick="toggleCheckbox(this)"/>
+                            <label for="farahngeit">Farahngeit</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather_cnt">
+                    <div class="weather_left">
+                        <h2 id="weather-city">City Name</h2>
+                        <p class="padding">Temperature: <span class="padding" id="weather-temp">--</span></p>
+                        <p class="padding">Weather: <span class="padding" id="weather-desc">--</span></p>
+                        <p class="padding">Humidity: <span class="padding" id="weather-humidity">--</span>%</p>
+                        <p class="padding">Wind Speed: <span class="padding" id="weather-wind">--</span> m/s</p>
+                    </div>
+    
+                    <div class="weather_right">
+                        <img class="logo" src="/WeatherApp/icon/no-result.svg" alt="Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast_cnt">
+                <h2>5-Days Forecast</h2>
+                <div class="forecast-grid">
+                    <div class="forecast-card" id="forecast-day1">
+                        <p class="forecast-date" id="date1">______</p>
+                        <p class="forecast_desc" id="desc1">Weather: ______</p>
+                        <p class="forecast_temp" id="tempMax1">Max: -- °C</p>
+                        <p class="forecast_temp" id="tempMin1">Min: -- °C</p>
+                    </div>
+                    <div class="forecast-card" id="forecast-day2">
+                        <p class="forecast-date" id="date2">______</p>
+                        <p class="forecast_desc" id="desc2">Weather: _____</p>
+                        <p class="forecast_temp" id="tempMax2">Max: -- °C</p>
+                        <p class="forecast_temp" id="tempMin2">Min: -- °C</p>
+                    </div>
+                    <div class="forecast-card" id="forecast-day3">
+                        <p class="forecast-date" id="date3">______</p>
+                        <p class="forecast_desc" id="desc3">Weather: _____</p>
+                        <p class="forecast_temp" id="tempMax3">Max: -- °C</p>
+                        <p class="forecast_temp" id="tempMin3">Min: -- °C</p>
+                    </div>
+                    <div class="forecast-card" id="forecast-day4">
+                        <p class="forecast-date" id="date4">______</p>
+                        <p class="forecast_desc" id="desc4">Weather: _____</p>
+                        <p class="forecast_temp" id="tempMax4">Max: -- °C</p>
+                        <p class="forecast_temp" id="tempMin4">Min: -- °C</p>
+                    </div>
+                    <div class="forecast-card" id="forecast-day5">
+                        <p class="forecast-date" id="date5">_______</p>
+                        <p class="forecast_desc" id="desc5">Weather: ______</p>
+                        <p class="forecast_temp" id="tempMax5">Max: -- °C</p>
+                        <p class="forecast_temp" id="tempMin5">Min: -- °C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

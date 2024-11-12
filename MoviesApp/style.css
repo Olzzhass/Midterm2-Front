@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    margin: 100px auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+#search-input {
+    width: 60%;
+    padding: 15px;
+    font-size: 16px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+}
+
+button {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+
+.suggestions {
+    position: absolute;
+    top: 45px;
+    right: 23.3%;
+    width: 61.7%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #ddd;
+}
+
+.liked-cnt {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+    margin-left: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.heart {
+    font-size: 25px;
+    color: red;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    cursor: pointer;
+    align-items: center;
+}
+
+.movie-info h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.movie-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.like-btn {
+    font-size: 24px;
+}
+
+.like-btn.liked {
+    color: red;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    position: relative;
+    overflow: auto;
+}
+
+.img-cnt {
+    display: flex;
+    justify-content: center;
+}
+
+.movieDetails-img {
+    width: 40%;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.watchlist_h2{
+    color: #fff;
+    font-size: 40px;
+}
+
+header {
+    text-align: center;
+}
+
+.watchlist_btn{
+    margin-top: 3%;
+    background-color: orange;
+    border: none;
+    padding: 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.watchlist_btn:hover {
+    border: 3px solid orange;
+    color: black;
+    background-color: #fff;
+}
+
+.sort-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sort-section label {
+    color: #fff;
+    font-size: 18px;
+}
